@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Public+Sans:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Lexend", sans-serif;
+  --font-body: "Public Sans", sans-serif;
+  
+  --color-primary: #FFC700;
+  --color-background: #0A0A0A;
+  --color-surface: #121414;
+  --color-surface-low: #1A1C1C;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
+}
+
+@utility neo-extrusion {
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.05), 8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+@utility neo-concave {
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.03), inset 6px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  @apply bg-background text-white font-body;
+  min-height: 100dvh;
+}
